@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "https://api.github.com/repos/angular/angular/issues",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

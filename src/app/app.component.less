@@ -1,0 +1,37 @@
+@white: #f4f2f0;
+@dark_blue: #5e698c;
+@light_blue: #8594b6;
+@dark_red: #ac6065;
+@light_red: #bb777b;
+
+
+.header{
+  background-color: @dark_blue;
+  height: 65px;
+  padding: 15px;
+  color: @white;
+  font-size: 30px;
+}
+
+.header-shade{
+  height: 5px;
+  background-color: @light_blue;
+}
+
+.body{
+  position: relative;
+  background-color: @white;
+  min-height: calc(100vh - 65px);
+}
+
+.box{
+  position: absolute;
+  background-color: @light_blue;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-radius: 5px;
+}
