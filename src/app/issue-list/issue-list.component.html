@@ -1,1 +1,5 @@
-<p>issue-list works!</p>
+<a class="btn" [routerLink]="['/issue-details']" [queryParams]="{id: data.id}">
+  <div class="list">
+    {{data.title}}
+  </div>
+</a>

@@ -1,0 +1,34 @@
+@white: #f4f2f0;
+@dark_blue: #5e698c;
+@light_blue: #8594b6;
+@light_red: #bb777b;
+@dark_red: #ac6065;
+
+
+.list{
+  background-color: @light_red;
+  height: 50px;
+  width: 95%;
+  margin: auto;
+}
+
+.list:hover{
+  background-color: @dark_red;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
+  z-index: 10;
+  top: -5px;
+  left: -2px;
+}
+
+a{
+  text-decoration: none !important;
+  color: inherit;
+}
+
+@media screen and (max-width: 450px) {
+  .list{
+    height: 65px;
+    font-size: 15px;
+  }
+}

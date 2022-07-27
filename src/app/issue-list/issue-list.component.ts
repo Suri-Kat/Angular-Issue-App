@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-issue-list',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./issue-list.component.less']
 })
 export class IssueListComponent implements OnInit {
+  @Input()
+  public data:any;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.data);
   }
 
 }

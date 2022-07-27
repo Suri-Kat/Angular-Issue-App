@@ -1,0 +1,24 @@
+@white: #f4f2f0;
+@dark_blue: #5e698c;
+@light_blue: #8594b6;
+@dark_red: #ac6065;
+@light_red: #bb777b;
+
+.box{
+  position: absolute;
+  background-color: @dark_red;
+  top: 25px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  width: 80%;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 450px) {
+  .box{
+    width: 90%;
+  }
+}
