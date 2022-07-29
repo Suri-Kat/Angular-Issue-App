@@ -1,24 +1,29 @@
-@white: #f4f2f0;
-@dark_blue: #5e698c;
+@white: #f5f0e1;
+@dark_blue: #1e3d59;
 @light_blue: #8594b6;
-@light_red: #bb777b;
-@dark_red: #ac6065;
-
+@blue: #50687f;
+@dark_dark_blue: #101936;
 
 .list{
-  background-color: @light_red;
-  height: 50px;
+  background-color: @blue;
+  height: auto;
   width: 95%;
-  margin: auto;
+  margin: 10px auto;
+  border-radius: 5px;
+  padding: 5px 15px;
+  z-index: 5;
+  color: @dark_dark_blue;
+  transition: 0.5s all;
 }
 
 .list:hover{
-  background-color: @dark_red;
+  background-color: @dark_blue;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   position: relative;
   z-index: 10;
   top: -5px;
   left: -2px;
+  color: @light_blue;
 }
 
 a{
@@ -26,9 +31,45 @@ a{
   color: inherit;
 }
 
+.title{
+  font-size: 20px;
+  //color: @dark_dark_blue;
+  margin: 5px 0;
+}
+.number{
+  font-size: 15px;
+  //color: @light_blue;
+}
+
+.date{
+  //color: @light_blue;
+  font-size: 15px;
+}
+
+.state{
+  margin-right: 10px ;
+  float: left;
+}
+
+.comment_num{
+  float: right;
+  top: -20px;
+  position: relative;
+  //color: @dark_dark_blue;
+}
+
 @media screen and (max-width: 450px) {
   .list{
     height: 65px;
+    font-size: 10px;
+    padding: 5px;
+  }
+  .title{
     font-size: 15px;
+  }
+  .number, .state, .comment_num, .date{
+    font-size: 10px;
+    margin: 0;
+    visibility: hidden;
   }
 }

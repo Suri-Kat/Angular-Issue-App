@@ -1,5 +1,19 @@
-<a class="btn" [routerLink]="['/issue-details']" [queryParams]="{id: data.id}">
+<a class="btn" [routerLink]="['/issue-details']" [queryParams]="{id: data.number}">
   <div class="list">
-    {{data.title}}
+    <div class="state" [ngStyle]="{'color': data.color }" >
+      ● {{data.state}}
+    </div>
+    <div class="date">
+      {{data.updated_at | date:'medium'}}
+    </div>
+    <div class="title">
+      {{data.title}}
+    </div>
+    <div class="number">
+      #{{data.number}}
+    </div>
+    <div class="comment_num">
+      <fa-icon [icon]="faComment"></fa-icon> {{data.comments}}
+    </div>
   </div>
 </a>

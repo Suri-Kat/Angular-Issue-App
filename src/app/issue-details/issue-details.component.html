@@ -1,1 +1,27 @@
-<p>issue-details works!</p>
+<div class="box" *ngIf="data">
+    <div class="example-button-row">
+      <button mat-button class="back" [routerLink]="['/issues']"><< Back</button>
+    </div>
+  <div class="title">
+    {{data.title}}
+  </div>
+  <div class="body">
+    <div class="detail_section">
+      <div class="detail" [ngStyle]="{'color': data.color }" >
+        ● {{data.state}}
+      </div>
+      <div class="detail">
+         #{{data.number}}
+      </div>
+      <div class="detail">
+        {{data.updated_at | date:'medium'}}
+      </div>
+      <div class="">
+        <fa-icon [icon]="faComment"></fa-icon> {{data.comments}}
+      </div>
+    </div>
+    <div class="description">
+      {{data.body}}
+    </div>
+  </div>
+</div>

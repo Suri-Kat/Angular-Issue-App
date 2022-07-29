@@ -1,24 +1,64 @@
-@white: #f4f2f0;
-@dark_blue: #5e698c;
+@white: #f5f0e1;
+@dark_blue: #1e3d59;
 @light_blue: #8594b6;
-@dark_red: #ac6065;
-@light_red: #bb777b;
+@blue: #50687f;
 
 .box{
   position: absolute;
-  background-color: @dark_red;
+  background-color: @dark_blue;
   top: 25px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 20px;
+  padding-bottom: 40px;
   width: 80%;
   border-radius: 5px;
+  padding-top: 15px;
 }
+
+
+.list{
+  margin-top: 75px;
+  position: relative;
+}
+
+.filter{
+  margin: 0px 20px 0 20px;
+  //font-size: 20px;
+  float: left;
+  color: @white;
+ // padding: 10px;
+
+}
+
+.sort{
+  margin: 0px 20px 0 20px;
+  //font-size: 20px;
+  float: right;
+  color: @white;
+}
+
+mat-paginator {
+  background-color: transparent;
+}
+
+.bottom{
+  background-color: antiquewhite;
+  position: fixed;
+  transform: translate(calc(100vw - 400px),calc(100vh - 120px));
+  z-index: 10;
+}
+
 
 @media screen and (max-width: 450px) {
   .box{
     width: 90%;
+  }
+  .sort{
+    float: left;
+  }
+  .list{
+    top: 80px;
   }
 }

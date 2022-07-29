@@ -1,5 +1,46 @@
+<div class="container">
 <div class="box">
-  <div *ngFor="let data of git_data">
-    <app-issue-list [data]=data></app-issue-list>
+
+  <div class="filter">
+
+    <mat-form-field appearance="fill">
+      <mat-label>State Filter</mat-label>
+      <mat-select (selectionChange)="stateFilter($event.value)">
+        <mat-option *ngFor="let state of states_list" [value]="state">{{state | titlecase}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+  </div>
+  <div class="sort">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Sort by</mat-label>
+      <mat-select disableRipple (selectionChange)="commentSort($event.value)">
+        <mat-option value="asc" >Comment number asc.</mat-option>
+        <mat-option value="desc" >Comment number dec.</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+  </div>
+
+  <div class="list">
+    <div *ngFor="let data of git_data">
+      <app-issue-list [data]=data></app-issue-list>
+    </div>
   </div>
 </div>
+</div>
+
+<div class="bottom">
+<mat-paginator
+              (page)="handlePageEvent($event)"
+              [length]="50"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 50]"
+              aria-label="Select page">
+</mat-paginator>
+</div>
+
+
